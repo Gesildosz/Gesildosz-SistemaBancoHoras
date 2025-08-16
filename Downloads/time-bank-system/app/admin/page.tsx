@@ -37,7 +37,6 @@ import {
 import { useRouter } from "next/navigation"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts"
 import * as XLSX from "xlsx"
-import ManutencaoControls from "@/components/manutencao-controls"
 
 interface Colaborador {
   id: number
@@ -3272,25 +3271,6 @@ export default function AdminPage() {
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-            {/* Manutenção Tab */}
-            <TabsContent value="manutencao">
-              <div className="space-y-6">
-                <Card className="bg-white/10 backdrop-blur-md border-white/20 shadow-2xl">
-                  <CardHeader className="p-4 sm:p-6 border-b border-white/10">
-                    <CardTitle className="text-lg sm:text-xl text-white flex items-center gap-2">
-                      <Settings className="h-5 w-5 text-red-400" />
-                      Controle de Manutenção do Sistema
-                    </CardTitle>
-                    <CardDescription className="text-sm text-red-100/80">
-                      Ative ou desative o modo de manutenção para colaboradores
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="p-4 sm:p-6">
-                    <ManutencaoControls />
-                  </CardContent>
-                </Card>
-              </div>
             </TabsContent>
           </Tabs>
         </div>
